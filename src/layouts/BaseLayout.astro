@@ -18,11 +18,16 @@ import '../styles/global.css'
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<title>Guia de instalacion</title>
 	</head>
-	<body class="bg-[#b9d3ff] m-7">
-		<Navigation />
-		<Header />
-		<slot />
-		<Footer />
-		
+	<body class="font-[Inter] bg-[#b9d3ff] m-7">
+    <Navigation />
+    <Header />
+
+	<a href="/"class="bg-[#00708f] text-white py-2 rounded-lg flex justify-center">Volver al inicio</a>
+
+    <main class="max-w-4xl mx-auto my-8 bg-white rounded-xl shadow-lg p-10">
+        <slot />
+    </main>
+
+    <Footer />
 	</body>
 </html>
