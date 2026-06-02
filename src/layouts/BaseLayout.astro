@@ -2,8 +2,7 @@
 import Navigation from '../components/Navigation.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import '../styles/global.css'
-
+//import '../styles/global.css'
 ---
 
 <html lang="es">
@@ -13,16 +12,18 @@ import '../styles/global.css'
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<title>Guia de instalacion</title>
+		<style is:global>
+			@import "../styles/global.css";
+		</style>
 	</head>
 	<body class="font-[Inter] bg-[#b9d3ff] m-7">
     <Navigation />
     <Header />
-
-	<a href="/"class="bg-[#00708f] text-white py-2 rounded-lg flex justify-center">Volver al inicio</a>
 
     <main class="max-w-4xl mx-auto my-8 bg-white rounded-xl shadow-lg p-10">
         <slot />
