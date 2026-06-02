@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v6.4.2"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>Guia de instalacion</title><link rel="stylesheet" href="/Actividad-en-Clase-/_astro/index.BLasIdL4.css"></head> <body class="font-[Inter] bg-[#b9d3ff] m-7"> <a href="/" class="bg-[#00708f] text-white py-2 rounded-lg flex justify-center">Volver al inicio</a> <header class="bg-blue-[#001f2e] p-4"> <h1 class="text-4xl font-bold text-white text-center bg-[#00415a] p-1 rounded-xl">Manual Tecnico Astro</h1> </header> <main class="max-w-4xl mx-auto my-8 bg-white rounded-xl shadow-lg p-10"> <h2 id="requisitos-previos">Requisitos previos</h2>
+<p>Dirigirse en VS a package.json y en la parte de scripts, despues de astro poner:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">"start"</span><span style="color:#79B8FF">:</span><span style="color:#9ECBFF"> "astro dev",</span></span></code></pre>
+<p>Luego debajo de ese mismo poner:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">"deploy"</span><span style="color:#79B8FF">:</span><span style="color:#9ECBFF"> "astro build &#x26;&#x26; gh-pages -d dist"</span></span></code></pre>
+<p>ahora te diriges a astro.config.mjs en la parte de “export default defineConfig({” y justo debajo poner:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">site:</span><span style="color:#9ECBFF"> 'https://tu-hombre-de-usuario.github.io',</span></span></code></pre>
+<p>Despues debajo de ese mismo pones:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">base:</span><span style="color:#9ECBFF"> '/Nombre-de-tu-repositorio',</span></span></code></pre>
+<p>No olvides el slash! (/)</p>
+<h2 id="instalacion-de-deploy">Instalacion de Deploy</h2>
+<p>Ahora tienes que hacer el siguiente paso en la terminal de VS:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -D</span><span style="color:#9ECBFF"> gh-pages</span></span></code></pre>
+<h2 id="github">Github</h2>
+<p>Luego te diriges a tu repositorio en Github
+Vas a la parte de settings (configuraciones)
+Luego a la seccion de pages
+Buscas el apartado de build and deployment
+en la parte de source miras que este en deploy from a branch (mas adelante usaremos github actions)
+Por defecto en la parte de branch se pone gh-pages, si no lo tienes asi te toca hacerlo manualmente</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>Ahora entras a la terminal de github y pones:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> deploy</span></span></code></pre>
+<p>Luego vuelves a Github y ya tienes el link, puedes acceder dandole al link directo o en el boton de Visit site.</p> </main> <footer class="flex justify-center mt-6 bg-cyan-500 rounded-xl"> <small class="text-white">© 2026 - Mike Fuentes</small> </footer> </body></html>
